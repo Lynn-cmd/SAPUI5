@@ -15,7 +15,7 @@ sap.ui.define(
                 // read msg from i18n model
                 var oBundle = this.getView().getModel("i18n").getResourceBundle();
 
-                // 临时调试：打印 bundle 是否加载、HelloMsg 取到什么111
+                // 临时调试：打印 bundle 是否加载、HelloMsg 取到什么
                 console.log("Bundle 对象:", oBundle);
                 console.log("HelloMsg 的值:", oBundle.getText("HelloMsg"));
                 console.log("ShowHelloButtonText 的值:", oBundle.getText("ShowHelloButtonText"));
