@@ -2,54 +2,22 @@
     controllerName="sap.ui.demo.walkthrough.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
-    
-    displayBlock="true">   
-<Shell>
-<App class="myAppDemoWT">
-        <pages>
-
-        <Page title="{i18n>HomePageTitle}"  titleAlignment="Center" >
-            <content>
-                <Panel 
-                headerText="{i18n>PanelHeaderText}" 
-                class="sapUiResponsiveMargin"
-                width="auto">
-
+    displayBlock="true"
+>
+    <Shell>
+        <App class="myAppDemoWT">
+            <pages>
+                <Page
+                    title="{i18n>HomePageTitle}"
+                    titleAlignment="Center"
+                >
                     <content>
-
-                     <Button text="Press Me" 
-                            press=".onPress" />
-
-                    <Button 
-                        text="{i18n>ShowHelloButtonText}" 
-                        press=".onShowHello" 
-                        class="myCustomButton"/>
-
-                    <Input  value="{/recipient/name}"
-                            description="Hello {/recipient/name}"
-                            valueLiveUpdate="true"
-                            width="60%"/>
-
-                    <FormattedText   
-                            htmlText="Hello {/recipient/name}"
-                            class="sapUiSmallMargin sapThemeHighlight -asColor myCustomText"/>
-
+                        <mvc:XMLView 
+                            viewName="sap.ui.demo.walkthrough.view.HelloPanel"
+                        />
                     </content>
-
-                    <headerToolbar>
-                    </headerToolbar>
-                    <infoToolbar>
-                    </infoToolbar>
-                    
-                </Panel>
-            </content>
-        
-        </Page>
-
-        </pages>
-</App>
-
-</Shell>
-
-
+                </Page>
+            </pages>
+        </App>
+    </Shell>
 </mvc:View>

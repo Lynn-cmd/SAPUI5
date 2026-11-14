@@ -1,0 +1,27 @@
+sap.ui.define([
+	"sap/ui/core/mvc/Controller",
+	"sap/m/MessageToast"
+], function(
+	Controller,
+	MessageToast
+) {
+	"use strict";
+
+	return Controller.extend("sap.demo.walkthrough.controller.HelloPanel", {
+		
+		 onShowHello: function () {
+                // read msg from i18n model
+                var oBundle = this.getView().getModel("i18n").getResourceBundle();
+                var sRecipient = this.getView().getModel().getProperty("/recipient/name");
+                var sMsg = oBundle.getText("HelloMsg", [sRecipient]);
+                // show message
+                MessageToast.show(sMsg);
+            },
+
+		onPress: function () {
+                // Handle button press event
+                //alert("Hello World SAPUI5!");
+                MessageToast.show("Hello World SAPUI5!");
+            }
+	})
+})
