@@ -11,20 +11,27 @@
         <Page title="{i18n>HomePageTitle}"  titleAlignment="Center" >
             <content>
                 <Panel 
-                headerText="{i18n>PanelHeaderText}"  >
+                headerText="{i18n>PanelHeaderText}" 
+                class="sapUiResponsiveMargin"
+                width="auto">
 
                     <content>
 
-                     <Button text="Press Me" press=".onPress" />
+                     <Button text="Press Me" 
+                            press=".onPress" />
 
-                        <Input value="{/recipient/name}"
-                        description="Hello {/recipient/name}"
-                        valueLiveUpdate="true"
-                        width="60%"></Input>
-
-                        <Button 
+                    <Button 
                         text="{i18n>ShowHelloButtonText}" 
-                        press=".onShowHello" />
+                        press=".onShowHello" 
+                        class="sapUiSmallMargin"/>
+
+                    <Input  value="{/recipient/name}"
+                            description="Hello {/recipient/name}"
+                            valueLiveUpdate="true"
+                            width="60%"/>
+
+                    <Text   text="{/recipient/name}"
+                            class="sapUiSmallMargin"/>
 
                     </content>
 
