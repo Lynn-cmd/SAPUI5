@@ -3,7 +3,7 @@ sap.ui.define(
         "sap/ui/core/mvc/Controller",
         "sap/m/MessageToast",
         "sap/ui/model/json/JSONModel",
-        "sap/ui/model/resource/ResourceModel",
+        "sap/ui/model/resource/ResourceModel"
     ],
     function (Controller, MessageToast, JSONModel, ResourceModel) {
         "use strict";
@@ -31,7 +31,7 @@ sap.ui.define(
                 // Handle button press event
                 //alert("Hello World SAPUI5!");
                 MessageToast.show("Hello World SAPUI5!");
-            },
+            }
         });
-    },
+    }
 );
