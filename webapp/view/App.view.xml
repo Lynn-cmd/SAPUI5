@@ -5,7 +5,7 @@
     
     displayBlock="true">   
 <Shell>
-<App >
+<App class="myAppDemoWT">
         <pages>
 
         <Page title="{i18n>HomePageTitle}"  titleAlignment="Center" >
@@ -23,15 +23,16 @@
                     <Button 
                         text="{i18n>ShowHelloButtonText}" 
                         press=".onShowHello" 
-                        class="sapUiSmallMargin"/>
+                        class="myCustomButton"/>
 
                     <Input  value="{/recipient/name}"
                             description="Hello {/recipient/name}"
                             valueLiveUpdate="true"
                             width="60%"/>
 
-                    <Text   text="{/recipient/name}"
-                            class="sapUiSmallMargin"/>
+                    <FormattedText   
+                            htmlText="Hello {/recipient/name}"
+                            class="sapUiSmallMargin sapThemeHighlight -asColor myCustomText"/>
 
                     </content>
 
