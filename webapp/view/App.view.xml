@@ -1,14 +1,47 @@
 <mvc:View
     controllerName="sap.ui.demo.walkthrough.controller.App"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-
+    xmlns="sap.m"
     
- <Button text="Press Me" press=".onPress" />
-<Input value="{/recipient/name}"
-        description="Hello {/recipient/name}"
-        valueLiveUpdate="true"
-        width="60%"></Input>
+    displayBlock="true">   
 
-<Button text="{i18n>ShowHelloButtonText}" press=".onShowHello" />
+<App >
+        <pages>
+
+        <Page title="{i18n>HomePageTitle}"  titleAlignment="Center" >
+            <content>
+                <Panel 
+                headerText="{i18n>PanelHeaderText}"  >
+
+                    <content>
+
+                     <Button text="Press Me" press=".onPress" />
+
+                        <Input value="{/recipient/name}"
+                        description="Hello {/recipient/name}"
+                        valueLiveUpdate="true"
+                        width="60%"></Input>
+
+                        <Button 
+                        text="{i18n>ShowHelloButtonText}" 
+                        press=".onShowHello" />
+
+                    </content>
+
+                    <headerToolbar>
+                    </headerToolbar>
+                    <infoToolbar>
+                    </infoToolbar>
+                    
+                </Panel>
+            </content>
+        
+        </Page>
+
+        </pages>
+</App>
+
+
+
+
 </mvc:View>
