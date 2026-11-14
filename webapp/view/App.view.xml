@@ -4,7 +4,7 @@
     xmlns="sap.m"
     
     displayBlock="true">   
-
+<Shell>
 <App >
         <pages>
 
@@ -41,7 +41,7 @@
         </pages>
 </App>
 
-
+</Shell>
 
 
 </mvc:View>
