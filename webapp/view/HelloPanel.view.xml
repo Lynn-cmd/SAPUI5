@@ -13,8 +13,10 @@
     >
         <content>
             <Button
-                text="Press Me"
-                press=".onPress"
+                id="helloDialogButton"
+                text="{i18n>DialogButtonText}" 
+                press=".onOpenDialog"
+                class="sapUiSmallMarginEnd"
             />
 
             <Button
