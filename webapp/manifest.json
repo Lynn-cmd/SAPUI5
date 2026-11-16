@@ -5,7 +5,7 @@
 	
     "sap.app": {
         "_version": "1.1.0",
-        "id": "sap.demo.walkthrough",
+        "id": "sap.ui.demo.walkthrough",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
