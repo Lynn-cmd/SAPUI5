@@ -1,0 +1,26 @@
+<mvc:View
+	controllerName=""
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+	
+	busyIndicatorDelay="0">
+
+    <List 
+        headerText="{i18n>invoiceListTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+        items="{invoice>/Invoices}">
+
+        <items>
+            <ObjectListItem
+                title="{invoice>Quantity} x {invoice>ProductName}"
+                number="{invoice>Quantity}"
+                
+                type="Active"  />
+        
+        </items>
+
+    </List>
+
+</mvc:View>
