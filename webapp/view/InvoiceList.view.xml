@@ -11,7 +11,12 @@
         headerText="{i18n>invoiceListTitle}"
         class="sapUiResponsiveMargin"
         width="auto"
-        items="{invoice>/Invoices}">
+        items="{
+                path:'invoice>/Invoices',
+                sorter: { path: 'invoice>ProductName', 
+                        descending: false ,
+                        group: true}
+                }">
 
         <headerToolbar>
             <Toolbar >
@@ -25,6 +30,7 @@
         <items>
             <ObjectListItem
                 title="{invoice>Quantity} x {invoice>ProductName}"
+                
                 number="{
                       parts:[ {path: 'invoice>ExtendedPrice'}, 
                                  {path: 'view>/currency'}],
@@ -43,6 +49,16 @@
                                     formatter:'.formatter.statusText'}" />
                  </firstStatus>
 
+                <attributes>
+                    <ObjectAttribute 
+                        title="{i18n>invoiceListShipperName}"
+                        text="{invoice>ShipperName}" />
+                    <ObjectAttribute
+                        title="{i18n>invoiceListShipDate}"
+                         text="{invoice>ShippedDate}" />
+                
+                </attributes>
+                
                 </ObjectListItem>
         
         </items>
