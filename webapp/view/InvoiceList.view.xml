@@ -29,7 +29,8 @@
 
         <items>
             <ObjectListItem
-                title="{invoice>Quantity} x {invoice>ProductName}"
+                
+                title="{= ${invoice>Quantity} + ' x ' + ${invoice>ProductName} + ' (' + ${invoice>ShipperName} + ')' }"
                 
                 number="{
                       parts:[ {path: 'invoice>ExtendedPrice'}, 
